@@ -111,7 +111,7 @@
 				};
 				
 				navigator.getUserMedia({video: true}, function( stream ) {
-					videoInput.src = window.URL.createObjectURL(stream);
+					videoInput.srcObject = stream;
 					videoInput.play();
 					videoInput.addEventListener('canplay', enablestart, false);
 				}, function() {
